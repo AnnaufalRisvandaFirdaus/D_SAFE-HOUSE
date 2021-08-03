@@ -22,16 +22,20 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function index(Request $request)
     {
-        $conten = Conten::all();
+        $keyword = $request->keyword;
+        $conten = Conten::where('pekerjaan', 'LIKE', '%'.$keyword.'%')
+        ->orwhere('nama_perusahaan', 'LIKE', '%'.$keyword.'%')
+        ->paginate(100);
+        $conten->appends($request->all());
         return view('user.content', compact('conten'));
     }
 
-    public function search(Request $request)
-    {
-        $keyword = $request->search;
-        $users = User::where('name', 'like', "%" . $keyword . "%")->paginate(5);
-        return view('user.content', compact('conten'))->with('i', (request()->input('page', 1) - 1) * 5);
-    }
+    // public function search(Request $request)
+    // {
+    //     $keyword = $request->search;
+    //     $users = User::where('name', 'like', "%" . $keyword . "%")->paginate(5);
+    //     return view('user.content', compact('conten'));
+    // }
 }

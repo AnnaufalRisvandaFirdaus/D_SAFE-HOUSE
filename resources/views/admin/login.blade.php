@@ -22,7 +22,7 @@
       <a href="template/index2.html" class="h1"><b>Kerja</b>Skuy</a>
     </div>
     <div class="card-body">
-      <p class="login-box-msg">Silahkan Log In terlebih dahulu</p>
+      <p class="login-box-msg">Login Admin</p>
 
       <form action="{{ route('login') }}" method="post">
         @csrf
@@ -44,12 +44,6 @@
         </div>
         <div class="row">
           <div class="col-8">
-            <div class="icheck-primary">
-              <input type="checkbox" id="remember">
-              <label for="remember">
-                Remember Me
-              </label>
-            </div>
           </div>
           <!-- /.col -->
           <div class="col-4">
@@ -72,9 +66,9 @@
       {{-- <p class="mb-1">
         <a href="forgot-password.html">Lupa password?</a>
       </p> --}}
-      <p class="mb-0">
+      {{-- <p class="mb-0">
         <a href="{{ url('register') }}" class="text-center">Belum punya akun? Silahkan Register</a>
-      </p>
+      </p> --}}
     </div>
     <!-- /.card-body -->
   </div>

@@ -4,41 +4,30 @@
 
 @section('content')
 
+<form method="POST" action="{{ url('profil') }}">
+@csrf
+
 <div class="mb-3">
     <label for="exampleFormControlInput1" class="form-label">Nama</label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="masukkan nama">
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="masukkan nama" name="name" value="{{ $user->name }}">
   </div>
   <div class="mb-3">
     <label for="exampleFormControlInput1" class="form-label">Email</label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="masukkan email">
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="masukkan email" name="email" value="{{ $user->email }}">
   </div>
   <div class="mb-3">
-    <label for="exampleFormControlInput1" class="form-label">Tanggal Lahir</label>
-    <input type="date" class="form-control" id="exampleFormControlInput1">
+    <label for="exampleFormControlInput1" class="form-label">Password</label>
+    <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="masukkan password" name="password" value="{{ $user->password }}">
   </div>
-  <div>
-    <label for="exampleFormControlInput1" class="form-label">Jenis Kelamin</label>
-    <p><input type='radio' name='jenis_kelamin' value='pria' />Pria</p>
-    <p><input type='radio' name='jenis_kelamin' value='perempuan' />Perempuan</p>
-  </div>
-  <div>
-    <label for="exampleFormControlInput1" class="form-label">Pendidikan Terakhir</label>
-    <p><input type='radio' name='pendidikan_terakhir' value='SD' />SD</p>
-    <p><input type='radio' name='pendidikan_terakhir' value='SMP' />SMP</p>
-  </div>
-  <div>
-    <label for="">Ganti Password</label>
+  {{-- <div>
+    <label for="">Password</label>
     <input type="password" class="form-control" id="">
   </div>
   <div>
     <label for="">Konfirmasi Password</label>
     <input type="password" class="form-control" id="">
-  </div>
-  <div class="mb-3">
-    <label for="exampleFormControlTextarea1" class="form-label">Pengenalan Singkat</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-  </div>
+  </div> --}}
 
-  <button type="button" class="btn btn-outline-primary btn-block">Simpan</button>
-    
+  <button type="submit" class="btn btn-outline-primary btn-block">Simpan</button>
+</form>    
 @endsection

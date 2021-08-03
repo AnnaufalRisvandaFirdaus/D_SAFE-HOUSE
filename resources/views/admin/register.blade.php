@@ -25,7 +25,7 @@
 
         <div class="card">
             <div class="card-body register-card-body">
-                <p class="login-box-msg">Daftar Anjing daripada Nganggur</p>
+                <p class="login-box-msg">Segera Daftar</p>
 
                 <form method="POST" action="{{ route('register') }}" >
                     @csrf

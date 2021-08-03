@@ -3,20 +3,23 @@
     <!-- Add icons to the links using the .nav-icon class
          with font-awesome or any other icon font library -->
     <li class="nav-header">MENU UTAMA</li>
-        <li class="nav-item">
-          <a href="/tips" class="nav-link">
-            <i class="far nav-icon fas fa-book"></i>
-            <p>Tips</p>
-          </a>
-        </li>
+    <li class="nav-item">
+      <a href="/" class="nav-link">
+        <i class="far nav-icon fas fa-search"></i>
+        <p>Cari Pekerjaan</p>
+      </a>
+      </li>
         <li class="nav-item">
           <a href="/profil" class="nav-link">
             <i class="far nav-icon fas fa-edit"></i>
             <p>Profil</p>
           </a>
         </li>
+        {{-- <li class="nav-item">
+          <a href="/tips" class="nav-link">
+            <i class="far nav-icon fas fa-book"></i>
+            <p>Tips</p>
+          </a>
+        </li> --}}
       </ul>
-    </li>
-    </li>
-  </ul>
 </nav>
